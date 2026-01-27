@@ -1,8 +1,8 @@
 # IT_360_Final_Project_Spring_2026
 
 ## Team Members
-- Member 1
-- Member 2
+- Sophia Criollo
+- Sarah Beyer
 
 ## Project Idea
 Description here
