@@ -5,4 +5,4 @@
 - Member 2
 
 ## Project Idea
-Description here
+Some new text.
