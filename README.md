@@ -8,7 +8,7 @@
 ## Project Idea
 This project involves developing a Python based digital forensics tool that scans a directory of evidence files and automatically extracts file system and embedded metadata. The tool outputs the collected metadata in a structured format to assist investigators with timeline reconstruction and evidence analysis. A python based code will allow our tool to be used on Windows, Linux, and MacOS. Availibilty is significant to our idea of success with our forensics tool. 
 ### Target Selection:
-The tool targets local file systems or a specified directory containing digital evidence files collected during an investigation. No matter the OS that the tool is being ran on, filesyetems can be ran through with the choice of the tool being python based. 
+The tool targets local file systems or a specified directory containing digital evidence files collected during an investigation. No matter the OS that the tool is being ran on, file systems can be ran through with the choice of the tool being python based. 
 ### Artifact Selection:
 The tool focuses on extracting file system metadata and embedded metadata from common file types such as images, PDFs, and document files.
 ### Implementation Language:
