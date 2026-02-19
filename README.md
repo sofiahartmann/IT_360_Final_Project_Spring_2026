@@ -16,3 +16,4 @@ The tool is built as a Python script that runs from the terminal. The user start
 ### Output Format:
 The extracted metadata will be exported in CSV format for easy analysis and sorting. The tool will asssist with conversion to a CSV format based on the specific operating system that the tool is ran on. 
 ## Incorporation of AI
+Our tool will use AI to analyze extracted metadata and assist investigators. AI will detect timestamp inconsistencies, unusual file activity, and suspicious patterns, while automatically organizing events for timeline reconstruction and file categorization. The AI component will be implemented in Python using rule-based logic and basic anomaly detection. All AI findings will be labeled as analytical suggestions and will not modify original evidence.
