@@ -15,3 +15,4 @@ The tool focuses on extracting file system metadata and embedded metadata from c
 The tool is built as a Python script that runs from the terminal. The user starts the program by providing the path to a folder containing evidence files. Python is responsible for controlling the entire workflow. Once the tool starts, Python recursively walks through the provided directory and identifies every file inside it. This allows the tool to automatically process large collections of files without manual selection. At this stage, the tool identifies file paths, ignores folders, prepares each file for analysis.
 ### Output Format:
 The extracted metadata will be exported in CSV format for easy analysis and sorting. The tool will asssist with conversion to a CSV format based on the specific operating system that the tool is ran on. 
+## Incorporation of AI
