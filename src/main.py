@@ -77,7 +77,6 @@ results.append([
     anomaly,
     extra_metadata
 ])
-            ])
 
     return results
 
