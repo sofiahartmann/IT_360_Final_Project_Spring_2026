@@ -1,3 +1,5 @@
+from PIL import Image
+from PIL.ExifTags import TAGS
 import os
 import csv
 import hashlib
@@ -56,29 +58,40 @@ def scan_directory(directory):
             file_hash = get_file_hash(file_path)
             anomaly = detect_anomaly(created, modified)
 
-            results.append([
-                file,
-                file_path,
-                size,
-                created,
-                modified,
-                file_hash,
-                anomaly
+extra_metadata = ""
+
+# Check if file is an image
+if file.lower().endswith((".jpg", ".jpeg", ".png")):
+    img_meta = get_image_metadata(file_path)
+
+    if "DateTime" in img_meta:
+        extra_metadata = f"EXIF_DateTime: {img_meta['DateTime']}"
+
+results.append([
+    file,
+    file_path,
+    size,
+    created,
+    modified,
+    file_hash,
+    anomaly,
+    extra_metadata
+])
             ])
 
     return results
 
 def save_to_csv(data):
-    headers = [
-        "File Name",
-        "Path",
-        "Size",
-        "Created Time",
-        "Modified Time",
-        "SHA256 Hash",
-        "Anomaly"
-    ]
-
+   headers = [
+    "File Name",
+    "Path",
+    "Size",
+    "Created Time",
+    "Modified Time",
+    "SHA256 Hash",
+    "Anomaly",
+    "Extra Metadata"
+]
     with open(OUTPUT_FILE, "w", newline='', encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(headers)
@@ -100,3 +113,20 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+def get_image_metadata(file_path):
+    metadata = {}
+
+    try:
+        image = Image.open(file_path)
+        exif_data = image._getexif()
+
+        if exif_data is not None:
+            for tag, value in exif_data.items():
+                tag_name = TAGS.get(tag, tag)
+                metadata[tag_name] = value
+
+        return metadata
+    except:
+        return {}
+
