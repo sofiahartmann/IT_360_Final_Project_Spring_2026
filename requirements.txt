@@ -1,2 +1,3 @@
-hello
-hi
+pandas
+Pillow
+PyPDF2
