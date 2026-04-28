@@ -7,8 +7,8 @@ A Python-based digital forensics tool that scans a directory of evidence files, 
 ---
 
 ## Demo Video
+ADD DEMO VIDEO LINK HERE!!
 
-ADD VIDEO LINK!
 ---
 
 ## Project Overview
@@ -16,17 +16,19 @@ ADD VIDEO LINK!
 This tool is designed to assist digital forensic investigators by automating the collection and analysis of file metadata. Instead of manually inspecting files one by one, investigators can point this tool at a folder of evidence files and instantly receive a structured report.
 
 The tool will:
-- Recursively scan a directory and process every file inside it.
-- Extract file system metadata.
-- Extract embedded metadata from images, PDFs, and documents.
-- Use AI-assisted logic to flag timestamp inconsistencies and suspicious file patterns.
-- Export all collected data to output.csv for easy review and sorting.
+- Recursively scan a directory and process every file inside it
+- Extract file system metadata (name, path, size, timestamps, SHA256 hash)
+- Extract embedded metadata from images, PDFs, and documents (EXIF data)
+- Use AI-assisted logic to flag timestamp inconsistencies and suspicious file patterns
+- Export all collected data to output.csv for easy review and sorting
 
 Supported Operating Systems: macOS and Linux only
 
 ---
 
 ## Project Structure
+
+```
 IT_360_Final_Project_Spring_2026/
 |-- src/
 |   |-- main.py
@@ -42,6 +44,8 @@ IT_360_Final_Project_Spring_2026/
 |-- LICENSE
 |-- README.md
 |-- requirements.txt
+```
+
 ---
 
 ## Prerequisites
@@ -65,56 +69,78 @@ Before running the tool, make sure you have the following installed:
    - Press Command + Space, type Terminal, and hit Enter
 
 2. Navigate to your project folder:
-```bash
+   ```bash
    cd ~/Desktop/IT_360_Final_Project_Spring_2026
-```
+   ```
 
 3. Install dependencies:
-```bash
+   ```bash
    python3 -m pip install -r requirements.txt
-```
+   ```
 
 4. Run the tool:
-```bash
+   ```bash
    python3 src/main.py
-```
+   ```
 
 5. When prompted, enter the folder path:
+   ```
+   data
+   ```
 
-   
-7. The tool will generate output.csv in your project folder. Open it with any spreadsheet application such as Excel, Google Sheets, or Numbers.
+6. The tool will generate output.csv in your project folder. Open it with any spreadsheet application such as Excel, Google Sheets, or Numbers.
 
 ---
 
 ### Ubuntu / Linux Setup
 
 1. Open Terminal
-   - Press Ctrl + Alt + T or search for Terminal in your applications
 
 2. Navigate to your project folder:
-```bash
+   ```bash
    cd ~/Desktop/IT_360_Final_Project_Spring_2026
-```
+   ```
 
-3. Install pip (if not already installed):
-```bash
+3. Install pip (if needed):
+   ```bash
    sudo apt update
    sudo apt install python3-pip -y
-```
+   ```
 
-4. Install dependencies:
-```bash
-   pip3 install -r requirements.txt
-```
+4. Set up Python environment:
+   ```bash
+   python3 -m venv venv
+   ```
 
-5. Run the tool:
-```bash
-   python3 src/main.py
-```
+5. Activate the virtual environment:
+   ```bash
+   source venv/bin/activate
+   ```
 
-6. When prompted, enter the folder path:
+6. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-   7. The tool will generate output.csv in your project folder. Open it with any spreadsheet application such as LibreOffice Calc or Google Sheets.
+7. Run the tool:
+   ```bash
+   python src/main.py
+   ```
+
+8. When prompted, enter the folder path:
+   ```
+   data
+   ```
+
+9. After it runs, confirm the output file was created:
+   ```bash
+   ls
+   ```
+
+10. Open the output file:
+    ```bash
+    xdg-open output.csv
+    ```
 
 ---
 
@@ -161,7 +187,7 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 **ModuleNotFoundError: No module named '...'**
 > You likely skipped the install step. Run the following and try again:
 > ```bash
-> python3 -m pip install -r requirements.txt
+> pip install -r requirements.txt
 > ```
 
 **No such file or directory: 'data'**
@@ -188,8 +214,8 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 
 | Name |
 |------|
-| Sophia Criollo |
-| Sarah Beyer |
+| Sophia Criollo | 
+| Sarah Beyer | 
 | Sofia Hartmann | 
 
 ---
@@ -198,4 +224,4 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 
 **Course:** IT360
 **Semester:** Spring 2026
-**Institution:** Isu School of Information Technology
+**Institution:** Illinois State University
