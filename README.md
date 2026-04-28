@@ -7,7 +7,10 @@ A Python-based digital forensics tool that scans a directory of evidence files, 
 ---
 
 ## Demo Video
-ADD DEMO VIDEO LINK HERE!!
+
+[Watch the Demo Here](https://your-video-link-here.com)
+
+Replace the link above with your YouTube or Google Drive video URL before submitting.
 
 ---
 
@@ -70,7 +73,7 @@ Before running the tool, make sure you have the following installed:
 
 2. Navigate to your project folder:
    ```bash
-   cd ~/Downloads/IT_360_Final_Project_Spring_2026
+   cd ~/Desktop/IT_360_Final_Project_Spring_2026
    ```
 
 3. Install dependencies:
@@ -112,7 +115,7 @@ Before running the tool, make sure you have the following installed:
    python3 -m venv venv
    ```
 
-5. Activate the virtual environment:
+5. Activate it:
    ```bash
    source venv/bin/activate
    ```
@@ -132,12 +135,12 @@ Before running the tool, make sure you have the following installed:
    data
    ```
 
-9. After it runs, confirm the output file was created:
+9. After it runs, type:
    ```bash
    ls
    ```
 
-10. Open the output file:
+10. The tool generates a file named output.csv. Open it by entering:
     ```bash
     xdg-open output.csv
     ```
@@ -212,19 +215,20 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 
 ## Contributors
 
-| Name |
+| Name | 
 |------|
-| Sophia Criollo | 
+| Sophia Criollo |
 | Sarah Beyer | 
 | Sofia Hartmann | 
 
 ---
 
 ## Course Info
- IT360 
-| Spring 2026 
-| Illinois State Univeristy |  
- School of Information Technology 
 
+**Course:** IT360
 ---
 
+**Semester:** Spring 2026
+---
+**Institution:** Illinois State University
+---
