@@ -1,33 +1,33 @@
 # Digital Forensics Metadata Tool
 ### IT360 Final Project — Spring 2026
-**Illinois State University**
 
-A Python centered digital forensics tool that scans a directory of evidence files, automatically extracts file system and embedded metadata, and uses AI analysis to detect anomalies and support timeline reconstructions. 
+A Python digital forensics tool that scans a directory of evidence files, automatically extracts file system and embedded metadata, and uses AI analysis, that is assisted, to detect anomalies and support timeline reconstruction.
 
 ---
 
 ## Demo Video
 
-REPLACEEEEE
+EVENTUALLY REPLACE
+
 
 ---
 
 ## Project Overview
 
-This tool is designed to assist digital forensic investigators by automating the collection and analysis of file metadata. Instead of manually inspecting files one by one, investigators can point this tool at a folder of evidence files and instantly receive a structured report. This project is expected to save time and aid investigators in the long run. 
+This tool is designed to assist digital forensic investigators by automating the collection and analysis of file metadata. Instead of manually inspecting files one by one, investigators can point this tool at a folder of evidence files and instantly receive a structured report. Our project was designed to help out investigators with an AI-assisted tool, saving them time on the job. 
 
 The tool will:
-- Recursively scan a directory and process every file inside it
-- Extract file system metadata. 
-- Extract embedded metadata from images, PDFs, and documents. 
+- Recursively scan a directory and process every file inside it.
+- Extract file system metadata.
+- Extract embedded metadata from images, PDFs, and documents.
 - Use AI-assisted logic to flag timestamp inconsistencies and suspicious file patterns.
 - Export all collected data to output.csv for easy review and sorting.
 
-Supported Operating Systems: macOS, Linux, Windows
+Supported Operating Systems: macOS, Linux, and Windows
 
 ---
 
-## Project Structure (For the Github) 
+## Project Structure (For the Github)
 
 ```
 IT_360_Final_Project_Spring_2026/
@@ -51,7 +51,7 @@ IT_360_Final_Project_Spring_2026/
 
 ## Prerequisites
 
-Before running the tool, make sure you have the following installed:
+Before running the tool, make sure you have the following installed (Linux, macOS, or Windows):
 
 - Python 3.8 or higher
   - Check your version: `python3 --version`
@@ -89,11 +89,19 @@ Before running the tool, make sure you have the following installed:
    data
    ```
 
-6. The tool will generate output.csv in your project folder. Open it with any spreadsheet application such as Excel, Google Sheets, or Numbers.
+6. Confirm the output file was created:
+   ```bash
+   ls
+   ```
+
+7. View the output:
+   ```bash
+   cat output.csv
+   ```
 
 ---
 
-### Ubuntu / Linux Setup (Proxmox)
+### Ubuntu / Linux Setup
 
 1. Open Terminal
 
@@ -145,9 +153,52 @@ Before running the tool, make sure you have the following installed:
 
 ---
 
+### Windows Setup
+
+1. Open PowerShell and navigate to your project folder:
+   ```powershell
+   cd "C:\Users\YourName\Desktop\YourProjectFolder"
+   ```
+   Tip: You can also type `cd` and drag the folder into PowerShell!
+
+2. Install required libraries:
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
+3. Run the tool:
+   ```powershell
+   python main.py
+   ```
+
+4. When prompted, enter the folder path:
+   ```
+   C:\Users\YourName\Desktop\IT_360_Final_Project_Spring_2026-main\IT_360_Final_Project_Spring_2026-main\data
+   ```
+
+5. View the output file using one of the following options:
+
+   Open in Notepad:
+   ```powershell
+   notepad output.csv
+   ```
+
+   Open in Excel:
+   ```powershell
+   start output.csv
+   ```
+
+   View in PowerShell:
+   ```powershell
+   Get-Content output.csv
+   ```
+
+---
+
 ## Output
 
 The tool generates a file named output.csv in your project folder after each run.
+This is what the output should look like: 
 
 | Field | Description |
 |-------|-------------|
@@ -164,7 +215,7 @@ The tool generates a file named output.csv in your project folder after each run
 
 ## AI-Assisted Anomaly Detection
 
-This tool uses AI-assisted logic to help investigators identify suspicious file activity. The AI component analyzes the extracted metadata and flags:
+This tool uses AI aided logic to help investigators identify suspicious file activity. The AI component analyzes the extracted metadata and flags:
 
 - Timestamp inconsistencies — Files where the modified date is earlier than the created date, or where timestamps seem out of place
 - Unusual file activity — Files that were accessed or changed outside of normal patterns
@@ -174,7 +225,7 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 
 ---
 
-## Troubleshooting
+## Troubleshooting (Common Errors)
 
 **python3: command not found**
 > Python is not installed or not configured correctly. Download and install it from https://www.python.org/downloads/
@@ -204,29 +255,24 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 
 ## Known Limitations
 
-- Supports macOS and Linux only (Proxmox Ubuntu was used for our Linux demo)
 - EXIF metadata extraction is most reliable for JPEG images — other file types may return limited embedded metadata
-- The AI anomaly detection uses logic and may produce false positives — all flagged results should be reviewed by a human investigator and not be relied on AI. 
-- Very large directories may take longer to process. 
+- The AI anomaly detection uses rule-based logic and may produce false positives — all flagged results should be reviewed by a human investigator
+- Very large directories may take longer to process depending on system performance
 
 ---
 
 ## Contributors
 
-| Name | 
-|------|
-| Sophia Criollo |
-| Sarah Beyer | 
-| Sofia Hartmann | 
+| Name | Grade |
+|------|------|
+| Sophia Criollo | Junior |
+| Sarah Beyer | Junior |
+| Sofia Hartmann | Senior |
 
 ---
 
-## Course Info:
+## Course Information: 
 
-**Course** IT360
----
-
-**Semester** Spring 2026
----
-**Institution** Illinois State University
----
+**Course:** IT360
+**Semester:** Spring 2026
+**Institution:** Illinois State University
