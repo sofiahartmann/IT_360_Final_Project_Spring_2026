@@ -70,7 +70,7 @@ Before running the tool, make sure you have the following installed:
 
 2. Navigate to your project folder:
    ```bash
-   cd ~/Desktop/IT_360_Final_Project_Spring_2026
+   cd ~/Downloads/IT_360_Final_Project_Spring_2026
    ```
 
 3. Install dependencies:
