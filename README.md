@@ -221,10 +221,10 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 ---
 
 ## Course Info
-| Course | IT360 |
-| Semester | Spring 2026 |
-| Univeristy | Illinois State Univeristy | 
-| School | School of Information Technology |
+ IT360 
+| Spring 2026 
+| Illinois State Univeristy |  
+ School of Information Technology 
 
 ---
 
