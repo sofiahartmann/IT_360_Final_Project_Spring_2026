@@ -206,10 +206,10 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 
 ## Known Limitations
 
-- Supports macOS and Linux only — Windows is not supported at this time
+- Supports macOS and Linux only (Proxmox Ubuntu was used for our Linux demo)
 - EXIF metadata extraction is most reliable for JPEG images — other file types may return limited embedded metadata
-- The AI anomaly detection uses rule-based logic and may produce false positives — all flagged results should be reviewed by a human investigator
-- Very large directories may take longer to process depending on system performance
+- The AI anomaly detection uses logic and may produce false positives — all flagged results should be reviewed by a human investigator and not be relied on AI. 
+- Very large directories may take longer to process. 
 
 ---
 
@@ -223,12 +223,12 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 
 ---
 
-## Course Info
+## Course Info:
 
-**Course:** IT360
+**Course** IT360
 ---
 
-**Semester:** Spring 2026
+**Semester** Spring 2026
 ---
-**Institution:** Illinois State University
+**Institution** Illinois State University
 ---
