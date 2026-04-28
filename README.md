@@ -1,19 +1,201 @@
-# IT_360_Final_Project_Spring_2026
+# Digital Forensics Metadata Tool
+### IT360 Final Project — Spring 2026
+**Illinois State University**
 
-## Team Members
-- Sophia Criollo
-- Sarah Beyer
-- Sofia Hartmann
+A Python-based digital forensics tool that scans a directory of evidence files, automatically extracts file system and embedded metadata, and uses AI-assisted analysis to detect anomalies and support timeline reconstruction.
 
-## Project Idea
-This project involves developing a Python based digital forensics tool that scans a directory of evidence files and automatically extracts file system and embedded metadata. The tool outputs the collected metadata in a structured format to assist investigators with timeline reconstruction and evidence analysis. A python based code will allow our tool to be used on MacOS and Linux. Availibilty is significant to our idea of success with our forensics tool. 
-### Target Selection:
-The tool targets local file systems or a specified directory containing digital evidence files collected during an investigation. No matter the OS that the tool is being ran on, file systems can be ran through with the choice of the tool being python based. 
-### Artifact Selection:
-The tool focuses on extracting file system metadata and embedded metadata from common file types such as images, PDFs, and document files.
-### Implementation Language:
-The tool is built as a Python script that runs from the terminal. The user starts the program by providing the path to a folder containing evidence files. Python is responsible for controlling the entire workflow. Once the tool starts, Python recursively walks through the provided directory and identifies every file inside it. This allows the tool to automatically process large collections of files without manual selection. At this stage, the tool identifies file paths, ignores folders, prepares each file for analysis.
-### Output Format:
-The extracted metadata will be exported in CSV format for easy analysis and sorting. The tool will asssist with conversion to a CSV format based on the specific operating system that the tool is ran on. 
-## Incorporation of AI
-Our tool will use AI to analyze extracted metadata and assist investigators. AI will detect timestamp inconsistencies, unusual file activity, and suspicious patterns, while automatically organizing events for timeline reconstruction and file categorization. The AI component will be implemented in Python using logic in order to check our work, help with testing, and to problem solve when coding based errors occur. 
+---
+
+## Demo Video
+
+ADD VIDEO LINK!
+---
+
+## Project Overview
+
+This tool is designed to assist digital forensic investigators by automating the collection and analysis of file metadata. Instead of manually inspecting files one by one, investigators can point this tool at a folder of evidence files and instantly receive a structured report.
+
+The tool will:
+- Recursively scan a directory and process every file inside it.
+- Extract file system metadata.
+- Extract embedded metadata from images, PDFs, and documents.
+- Use AI-assisted logic to flag timestamp inconsistencies and suspicious file patterns.
+- Export all collected data to output.csv for easy review and sorting.
+
+Supported Operating Systems: macOS and Linux only
+
+---
+
+## Project Structure
+IT_360_Final_Project_Spring_2026/
+|-- src/
+|   |-- main.py
+|   |-- module1.py
+|   |-- (other source code files)
+|-- docs/
+|   |-- final_report.pdf
+|   |-- (any other supporting documents or images)
+|-- data/
+|   |-- sample_evidence.dd
+|   |-- (any sample files needed to run the demo)
+|-- .gitignore
+|-- LICENSE
+|-- README.md
+|-- requirements.txt
+---
+
+## Prerequisites
+
+Before running the tool, make sure you have the following installed:
+
+- Python 3.8 or higher
+  - Check your version: `python3 --version`
+  - Download from: https://www.python.org/downloads/
+- pip (Python's package manager — usually included with Python)
+  - Check your version: `pip3 --version`
+- The repository cloned or downloaded to your machine
+
+---
+
+## Setup Instructions
+
+### macOS Setup
+
+1. Open Terminal
+   - Press Command + Space, type Terminal, and hit Enter
+
+2. Navigate to your project folder:
+```bash
+   cd ~/Desktop/IT_360_Final_Project_Spring_2026
+```
+
+3. Install dependencies:
+```bash
+   python3 -m pip install -r requirements.txt
+```
+
+4. Run the tool:
+```bash
+   python3 src/main.py
+```
+
+5. When prompted, enter the folder path:
+
+   
+7. The tool will generate output.csv in your project folder. Open it with any spreadsheet application such as Excel, Google Sheets, or Numbers.
+
+---
+
+### Ubuntu / Linux Setup
+
+1. Open Terminal
+   - Press Ctrl + Alt + T or search for Terminal in your applications
+
+2. Navigate to your project folder:
+```bash
+   cd ~/Desktop/IT_360_Final_Project_Spring_2026
+```
+
+3. Install pip (if not already installed):
+```bash
+   sudo apt update
+   sudo apt install python3-pip -y
+```
+
+4. Install dependencies:
+```bash
+   pip3 install -r requirements.txt
+```
+
+5. Run the tool:
+```bash
+   python3 src/main.py
+```
+
+6. When prompted, enter the folder path:
+
+   7. The tool will generate output.csv in your project folder. Open it with any spreadsheet application such as LibreOffice Calc or Google Sheets.
+
+---
+
+## Output
+
+The tool generates a file named output.csv in your project folder after each run.
+
+| Field | Description |
+|-------|-------------|
+| File Name | Name of the scanned file |
+| File Path | Full path to the file on your system |
+| File Size | Size of the file in bytes |
+| Created Timestamp | When the file was originally created |
+| Modified Timestamp | When the file was last modified |
+| SHA256 Hash | Unique cryptographic fingerprint of the file |
+| Anomaly Detection Result | AI flag for suspicious patterns or timestamp issues |
+| Extra Metadata (EXIF) | Embedded metadata such as camera info, GPS, author, etc. |
+
+---
+
+## AI-Assisted Anomaly Detection
+
+This tool uses AI-assisted logic to help investigators identify suspicious file activity. The AI component analyzes the extracted metadata and flags:
+
+- Timestamp inconsistencies — Files where the modified date is earlier than the created date, or where timestamps seem out of place
+- Unusual file activity — Files that were accessed or changed outside of normal patterns
+- Suspicious patterns — Repeated hashes (duplicate files), unexpected file types, or metadata mismatches
+
+Results appear in the Anomaly Detection Result column of the CSV output. Flagged files are not automatically evidence of wrongdoing — they are starting points for further human investigation.
+
+---
+
+## Troubleshooting
+
+**python3: command not found**
+> Python is not installed or not configured correctly. Download and install it from https://www.python.org/downloads/
+
+**pip: command not found or pip3: command not found (Linux)**
+> Run the following to install pip:
+> ```bash
+> sudo apt update && sudo apt install python3-pip -y
+> ```
+
+**ModuleNotFoundError: No module named '...'**
+> You likely skipped the install step. Run the following and try again:
+> ```bash
+> python3 -m pip install -r requirements.txt
+> ```
+
+**No such file or directory: 'data'**
+> Make sure your evidence files are placed inside the data/ folder in the project directory before running the tool.
+
+**output.csv is empty or missing**
+> The data/ folder may be empty or contain unsupported file types. Make sure you have image, PDF, or document files inside it before running.
+
+**Permission denied**
+> Try running the command with sudo in front, or check that you have read access to the files in your data/ folder.
+
+---
+
+## Known Limitations
+
+- Supports macOS and Linux only — Windows is not supported at this time
+- EXIF metadata extraction is most reliable for JPEG images — other file types may return limited embedded metadata
+- The AI anomaly detection uses rule-based logic and may produce false positives — all flagged results should be reviewed by a human investigator
+- Very large directories may take longer to process depending on system performance
+
+---
+
+## Contributors
+
+| Name |
+|------|
+| Sophia Criollo |
+| Sarah Beyer |
+| Sofia Hartmann | 
+
+---
+
+## Course Info
+
+**Course:** IT360
+**Semester:** Spring 2026
+**Institution:** Isu School of Information Technology
