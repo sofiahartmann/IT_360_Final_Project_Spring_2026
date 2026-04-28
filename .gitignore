@@ -1,0 +1,37 @@
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.env/
+
+# --------------------
+# Output files
+# --------------------
+output.csv
+
+# --------------------
+# OS-specific files
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# IDE / Editor files
+# --------------------
+.vscode/
+.idea/
+
+# --------------------
+# Large or sensitive evidence files (optional)
+# --------------------
+data/*.dd
+data/*.img
+data/*.E01
+data/*large*
