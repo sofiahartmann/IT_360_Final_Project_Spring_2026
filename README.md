@@ -2,28 +2,26 @@
 ### IT360 Final Project — Spring 2026
 **Illinois State University**
 
-A Python-based digital forensics tool that scans a directory of evidence files, automatically extracts file system and embedded metadata, and uses AI-assisted analysis to detect anomalies and support timeline reconstruction.
+A Python centered digital forensics tool that scans a directory of evidence files, automatically extracts file system and embedded metadata, and uses AI analysis to detect anomalies and support timeline reconstructions. 
 
 ---
 
 ## Demo Video
 
-[Watch the Demo Here](https://your-video-link-here.com)
-
-Replace the link above with your YouTube or Google Drive video URL before submitting.
+REPLACEEEEE
 
 ---
 
 ## Project Overview
 
-This tool is designed to assist digital forensic investigators by automating the collection and analysis of file metadata. Instead of manually inspecting files one by one, investigators can point this tool at a folder of evidence files and instantly receive a structured report.
+This tool is designed to assist digital forensic investigators by automating the collection and analysis of file metadata. Instead of manually inspecting files one by one, investigators can point this tool at a folder of evidence files and instantly receive a structured report. This project is expected to save time and aid investigators in the long run. 
 
 The tool will:
 - Recursively scan a directory and process every file inside it
-- Extract file system metadata (name, path, size, timestamps, SHA256 hash)
-- Extract embedded metadata from images, PDFs, and documents (EXIF data)
-- Use AI-assisted logic to flag timestamp inconsistencies and suspicious file patterns
-- Export all collected data to output.csv for easy review and sorting
+- Extract file system metadata. 
+- Extract embedded metadata from images, PDFs, and documents. 
+- Use AI-assisted logic to flag timestamp inconsistencies and suspicious file patterns.
+- Export all collected data to output.csv for easy review and sorting.
 
 Supported Operating Systems: macOS and Linux only
 
@@ -95,7 +93,7 @@ Before running the tool, make sure you have the following installed:
 
 ---
 
-### Ubuntu / Linux Setup
+### Ubuntu / Linux Setup (Proxmox)
 
 1. Open Terminal
 
