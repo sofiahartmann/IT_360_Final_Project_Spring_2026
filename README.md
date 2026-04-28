@@ -29,7 +29,7 @@ Supported Operating Systems: macOS and Linux only
 
 ---
 
-## Project Structure
+## Project Structure (For the Github) 
 
 ```
 IT_360_Final_Project_Spring_2026/
