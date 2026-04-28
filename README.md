@@ -23,7 +23,7 @@ The tool will:
 - Use AI-assisted logic to flag timestamp inconsistencies and suspicious file patterns.
 - Export all collected data to output.csv for easy review and sorting.
 
-Supported Operating Systems: macOS and Linux only
+Supported Operating Systems: macOS, Linux, Windows
 
 ---
 
