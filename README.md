@@ -12,6 +12,11 @@ EVENTUALLY REPLACE
 
 ---
 
+## Written Report
+
+Here is the written report: file:///C:/Users/sarah/Downloads/Written%20Report%20-%20IT360.pdf
+---
+
 ## Project Overview
 
 This tool is designed to assist digital forensic investigators by automating the collection and analysis of file metadata. Instead of manually inspecting files one by one, investigators can point this tool at a folder of evidence files and instantly receive a structured report. Our project was designed to help out investigators with an AI-assisted tool, saving them time on the job. 
