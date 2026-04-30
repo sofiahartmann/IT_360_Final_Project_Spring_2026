@@ -14,7 +14,9 @@ EVENTUALLY REPLACE
 
 ## Written Report
 
-Here is the written report: file:///C:/Users/sarah/Downloads/Written%20Report%20-%20IT360.pdf
+Check the Docs for the written report. 
+
+
 ---
 
 ## Project Overview
