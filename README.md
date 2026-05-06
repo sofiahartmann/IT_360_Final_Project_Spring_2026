@@ -283,3 +283,40 @@ Results appear in the Anomaly Detection Result column of the CSV output. Flagged
 **Course:** IT360
 **Semester:** Spring 2026
 **Institution:** Illinois State University
+
+---
+
+## Changelog
+
+**January 27, 2026 — sofiahartmann**
+Created the repository and added the initial README with just the project title. Then added the first project description including placeholder team members and a project idea section.
+
+**February 3, 2026 — sofiahartmann**
+Added a third team member placeholder to the README.
+
+**February 3, 2026 — sebeye1 (Sarah Beyer)**
+Added Sofia Hartmann to the team members list. Expanded the project description with more detail about the tool's purpose, target selection, artifact selection, implementation language, output format, and cross-platform availability.
+
+**February 5, 2026 — sebeye1 (Sarah Beyer)**
+Updated the project description to clarify that the tool would support MacOS and Linux only. Refined wording throughout the project overview sections.
+
+**February 19, 2026 — sophiacriollo**
+Made updates to the README content.
+
+**March 31, 2026 — sofiahartmann**
+Made updates to the README content.
+
+**April 28, 2026 — sebeye1 (Sarah Beyer)**
+Completely overhauled the README with a professional structure. Added the project title, subtitle, and Illinois State University header. Added sections for Demo Video, Project Overview, Project Structure, Prerequisites, macOS Setup Instructions, Ubuntu/Linux Setup Instructions, Output table, AI-Assisted Anomaly Detection explanation, Troubleshooting guide, Known Limitations, Contributors table, and Course Info. This represented the bulk of the README documentation work.
+
+**April 28, 2026 — sofiahartmann**
+Made additional edits and refinements to the README content.
+
+**April 28, 2026 — sophiacriollo**
+Made additional edits and refinements to the README content.
+
+**April 30, 2026 — sebeye1 (Sarah Beyer)**
+Continued refining the README with updated setup instructions and formatting corrections.
+
+**April 30, 2026 — sophiacriollo**
+Added the demo video link to the README.
